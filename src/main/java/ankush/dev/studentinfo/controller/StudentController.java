@@ -12,7 +12,7 @@ import java.util.Optional;
 @RequestMapping("/students")
 public class StudentController {
 
-    StudentService studentService;
+   private StudentService studentService;
 
     @Autowired
     public StudentController(StudentService studentService) {
@@ -24,7 +24,7 @@ public class StudentController {
         return studentService.getStudentById(id);
     }
     @PostMapping
-    public Optional<GenericStudentDto> createStudentInfo (GenericStudentDto genericStudentDto){
+    public Optional<GenericStudentDto> createStudentInfo (@RequestBody GenericStudentDto genericStudentDto){
         return studentService.createStudentInfo(genericStudentDto);
     }
 
