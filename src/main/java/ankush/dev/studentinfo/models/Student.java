@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Student extends BaseModel {
-
+// STUDENT info
     private int age;
     private String name;
     private String email;
